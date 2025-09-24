@@ -1,6 +1,6 @@
 # Stage 1: Build ứng dụng
 # Sử dụng image Maven với JDK 17
-FROM maven:3.8.6-openjdk-17 AS build
+FROM maven:3.9.11-eclipse-temurin-17 AS build
 WORKDIR /app
 # Sao chép file pom.xml trước để tận dụng cache của Docker
 COPY pom.xml .
@@ -20,3 +20,4 @@ COPY --from=build /app/target/servlet-demo.war /usr/local/tomcat/webapps/ROOT.wa
 EXPOSE 8080
 # Lệnh mặc định để khởi động Tomcat
 CMD ["catalina.sh", "run"]
+
