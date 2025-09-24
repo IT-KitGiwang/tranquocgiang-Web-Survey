@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Murach's Java Servlets and JSP — Survey</title>
+    <!-- Tailwind CDN (development / quick use) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<header class="bg-white shadow-sm">
+    <div class="max-w-3xl mx-auto px-4 py-4 flex items-center gap-4">
+        <img src="https://th.bing.com/th/id/R.11788f783e71ba403df35767d1fff9b0?rik=BUoY0GjFE7kwDg&riu=http%3a%2f%2fwww.southeastlinuxfest.org%2fwp-content%2fuploads%2f2014%2f06%2fMurach_image.jpg&ehk=Tnd94O0pLU4dIzMs62%2fGf%2f9Cx7nJBflLVhjGo7TwfXc%3d&risl=&pid=ImgRaw&r=0" alt="Murach Logo" class="w-28 h-auto rounded">
+        <h1 class="text-2xl font-semibold">Murach's — Survey</h1>
+    </div>
+</header>
+
+<main class="max-w-3xl mx-auto p-6">
+    <form action="survey" method="post" class="bg-white rounded-2xl shadow p-6 sm:p-8">
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold">Survey</h2>
+            <p class="text-sm text-gray-600">If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+        </div>
+
+        <fieldset class="mb-6">
+            <legend class="text-lg font-medium mb-3">Your information:</legend>
+
+            <label class="block text-sm font-medium text-gray-700">First Name
+                <input type="text" name="firstName" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2">
+            </label>
+
+            <label class="block text-sm font-medium text-gray-700 mt-4">Last Name
+                <input type="text" name="lastName" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2">
+            </label>
+
+            <label class="block text-sm font-medium text-gray-700 mt-4">Email
+                <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2">
+            </label>
+
+            <label class="block text-sm font-medium text-gray-700 mt-4">Date of Birth
+                <input type="date" name="dob" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2">
+            </label>
+        </fieldset>
+
+        <fieldset class="mb-6">
+            <legend class="text-lg font-medium mb-3">How did you hear about us?</legend>
+
+            <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-6 gap-2">
+                <label class="inline-flex items-center gap-2">
+                    <input type="radio" name="heardFrom" value="Search Engine" checked class="h-4 w-4 text-indigo-600 border-gray-300">
+                    <span class="text-sm">Search engine</span>
+                </label>
+
+                <label class="inline-flex items-center gap-2">
+                    <input type="radio" name="heardFrom" value="Friend" class="h-4 w-4 text-indigo-600 border-gray-300">
+                    <span class="text-sm">Word of mouth</span>
+                </label>
+
+                <label class="inline-flex items-center gap-2">
+                    <input type="radio" name="heardFrom" value="Social Media" class="h-4 w-4 text-indigo-600 border-gray-300">
+                    <span class="text-sm">Social Media</span>
+                </label>
+
+                <label class="inline-flex items-center gap-2">
+                    <input type="radio" name="heardFrom" value="Other" class="h-4 w-4 text-indigo-600 border-gray-300">
+                    <span class="text-sm">Other</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="mb-6">
+            <legend class="text-lg font-medium mb-3">Would you like to receive announcements about new CDs and special offers?</legend>
+
+            <div class="flex flex-col gap-3">
+                <label class="inline-flex items-center gap-2">
+                    <input type="checkbox" name="wantsUpdates" class="h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    <span class="text-sm">YES, I'd like that.</span>
+                </label>
+
+                <label class="inline-flex items-center gap-2">
+                    <input type="checkbox" name="emailOK" class="h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    <span class="text-sm">YES, please send me email announcements.</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700">Please contact me by:</label>
+            <select name="contactVia" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2">
+                <option value="Both" selected>Email or postal mail</option>
+                <option value="Email">Email only</option>
+                <option value="Postal Mail">Postal mail only</option>
+            </select>
+        </div>
+
+        <div class="flex justify-end">
+            <button type="submit" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-indigo-500">Submit</button>
+        </div>
+    </form>
+</main>
+
+<footer class="max-w-3xl mx-auto p-4 text-center text-sm text-gray-500">
+    © Murach's Java Servlets and JSP
+</footer>
+
+</body>
+</html>
